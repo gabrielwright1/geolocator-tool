@@ -19,13 +19,21 @@ app.popupOffsets = {
 
 // detect the user's location using their IP address
 app.getUserLocation = () => {
-	$.ajax("http://ip-api.com/json/").then((res) => {
-		// make coordinates globally available
-		app.lat = res.lat;
-		app.lon = res.lon;
-		// build the map based on the user's position
-		app.createMap(res.lat, res.lon);
-	});
+	// *** removed to API call to prevent HTTPS issues ***
+	// $.ajax("http://ip-api.com/json/").then((res) => {
+	// 	// make coordinates globally available
+	// 	app.lat = res.lat;
+	// 	app.lon = res.lon;
+	// 	// build the map based on the user's position
+	// 	app.createMap(res.lat, res.lon);
+	// });
+	// *****************************************************
+
+	// Set default coordinates
+	app.lat = 43.6547;
+	app.lon = -79.3623;
+	// 	// build the map based on the user's position
+	app.createMap(app.lat, app.lon);
 };
 
 // query for address details (results are biased towards the users' location)
@@ -46,7 +54,7 @@ app.createMap = (lat, lon) => {
 		container: "map",
 		basePath: "sdk/",
 		center: [lon, lat],
-		zoom: 5,
+		zoom: 3,
 		theme: {
 			style: "buildings",
 			layer: "basic",
