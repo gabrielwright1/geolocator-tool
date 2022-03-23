@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html class="use-all-space">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<meta charset="UTF-8" />
+		<title>Geolocator Tool</title>
+		<!-- 
+    App: Mailing Address Finder App
+
+    Problem:
+    - I always wondered how common my home address is... if only there
+    was a way to display similar addresses in other states/countries on
+    a map visually.
+
+    Requirements:
+    - Create a map that centers on the user's location based on their IP address
+    - Create a basic searchbar that turns the address into latitude/longitude coordinates
+    - Using the query results' coordinates, place a marker on each location
+    - For each marker, add a popup dialogue that displays the mailing details
+    - Clear the map each time the user queries for another address.
+
+    -->
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+		/>
+
+		<!-- Bootstrap 4 Import-->
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous"
+		/>
+		<!-- Import main styling -->
+		<link rel="stylesheet" href="./styles.css" />
+		<!-- Tom Tom Map API SDK -->
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.15.0/maps/maps.css"
+		/>
+		<script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.15.0/maps/maps-web.min.js"></script>
+	</head>
+	<body class="bg-dark">
+		<!-- Searchbar -->
+		<header class="navbar navbar-dark bg-dark">
+			<span id="nav-name">Mailing Address Finder</span>
+			<form class="form-inline">
+				<!-- <label for="search-input">Enter an Address:</label> -->
+				<input
+					class="form-control mr-sm-2"
+					type="text"
+					placeholder="Search"
+					aria-label="Search"
+					id="search-input"
+				/>
+				<button class="btn btn-success" type="submit">Search</button>
+			</form>
+		</header>
+
+		<!-- TomTom Map -->
+		<div id="map"></div>
+
+		<!-- Footer -->
+		<footer class="container">
+			<span>Created at Juno College (2021)</span>
+		</footer>
+		<!-- import jquery -->
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.js"
+			integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+			crossorigin="anonymous"
+		></script>
+		<!-- import main script -->
+		<script src="./script.js"></script>
+	</body>
+</html>
