@@ -18,15 +18,15 @@ app.popupOffsets = {
 };
 
 // detect the user's location using their IP address
-// app.getUserLocation = () => {
-//   $.ajax("http://ip-api.com/json/").then((res) => {
-//     // make coordinates globally available
-//     app.lat = res.lat;
-//     app.lon = res.lon;
-//     // build the map based on the user's position
-//     app.createMap(res.lat, res.lon);
-//   });
-// };
+app.getUserLocation = () => {
+	$.ajax("http://ip-api.com/json/").then((res) => {
+		// make coordinates globally available
+		app.lat = res.lat;
+		app.lon = res.lon;
+		// build the map based on the user's position
+		app.createMap(res.lat, res.lon);
+	});
+};
 
 // query for address details (results are biased towards the users' location)
 app.getGeocodes = (address) => {
