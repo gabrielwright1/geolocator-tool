@@ -1,4 +1,5 @@
 Geolocator Tool
+---------------------------------------
 
 Problem:
 - I always wondered how common my home address is... if only there
