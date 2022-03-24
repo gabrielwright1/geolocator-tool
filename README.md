@@ -1,7 +1,7 @@
 Geolocator Tool
 ---------------------------------------
 
-Problem:
+Problems to solve:
 - I always wondered how common my home address is... if only there
 was a way to display similar addresses in other states/countries on
 a map visually.
