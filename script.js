@@ -17,7 +17,7 @@ app.popupOffsets = {
 	right: [-25, -35],
 };
 
-// detect the user's location using their IP address
+// Set initial coordinates for map (Toronto)
 app.getUserLocation = () => {
 	// Set default coordinates
 	app.lat = 43.6547;
