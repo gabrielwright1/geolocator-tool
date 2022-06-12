@@ -14,3 +14,10 @@
 
 ## Team members:
 - Gabriel Wright
+
+## Technology used:
+- HTML
+- CSS
+- JavaScript
+- Bootstrap
+- jQuery
