@@ -3,7 +3,7 @@
 ## Live site:
 - https://gabriel-wright-geolocator-app.netlify.app/
 
-## Requirements:
+## Objectives:
 
 -   Create a map that centers on a location in Toronto
 -   Create a basic searchbar to accept an address by user
