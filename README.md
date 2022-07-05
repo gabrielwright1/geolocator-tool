@@ -1,4 +1,4 @@
-# Geolocator Tool
+# Geolocator Tool - Personal Project
 
 ## Live site:
 - https://gabriel-wright-geolocator-app.netlify.app/
